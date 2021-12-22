@@ -28,34 +28,25 @@ const morgan = require('morgan')
 
 ### Model
 ```js
-// The Creepee schema
-const userSchema = new mongoose.Schema({
-fullName: {
-type: String,
-required: true
+// The bookmark schema
+const BookmarkSchema = new mongoose.Schema(
+{
+title: String,
+url: String,
+image: String
 },
-email: {
-type: String,
-required: true
-},
-password: {
-type: String,
-required: true
-}
-})
+{ timestamps: true }
+)
 
+const Bookmark = mongoose.model('Bookmark', BookmarkSchema)
 ```
 
 ### Middleware
 ```Js
-/////////////////////////////////
-//Middleware
-//////////////////////////////////
-app.use(cors()) //Preventing cors errors, opening up access for frontend
-app.use(morgan('dev')) //Logging
-app.use(express.json()) //Parsing json bodies
-app.use(require('./controllers/user'))
-ess.json())
+/_ MIDDLEWARE _/
+app.use(cors())
+app.use(morgan('dev'))
+app.use(express.json())
 ```
 
 ### Project Backend Overview

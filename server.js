@@ -18,8 +18,6 @@ const bcrypt = require('bcrypt')
 require('./models/user')
 require('./models/postmodel')
 
-
-
 /////////////////////////////////
 // Database Connection
 ////////////////////////////////
@@ -35,7 +33,7 @@ mongoose.connection
   .on('close', () => console.log('You are disconnected from Mongo'))
   .on('error', error => console.log(error))
 
-  /////////////////////////////////
+/////////////////////////////////
 //Middleware
 //////////////////////////////////
 app.use(cors()) //Preventing cors errors, opening up access for frontend
@@ -44,12 +42,9 @@ app.use(express.json()) //Parsing json bodies
 app.use(require('./controllers/user'))
 app.use(require('./controllers/post'))
 
-
 //////////////////////////////
 // Models
 //////////////////////////////
-
-
 
 ////////////////////////////////
 // Routes
@@ -58,7 +53,6 @@ app.use(require('./controllers/post'))
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
-
 
 /////////////////////////////////
 // Server Listener
