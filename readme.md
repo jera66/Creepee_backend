@@ -3,7 +3,7 @@ This is the backend or under-the-hood of a project called Creepee. This project 
 
 Creepee is one of the projects I've been working on at General Assembly. This project is the capstone and is the last project of the SEIR-PENGUIN cohort.
  
- <a href="https://fervent-lamarr-383302.netlify.app/">Live Link</a>
+ <a href="https://creepee-app.herokuapp.com/">Deployed Link</a>
 
 
 ### Technologies used
