@@ -14,6 +14,11 @@ const mongoose = require('mongoose')
 //Importing middleware
 const cors = require('cors')
 const morgan = require('morgan')
+const bcrypt = require('bcrypt')
+require('./models/user')
+require('./models/postmodel')
+
+
 
 /////////////////////////////////
 // Database Connection
@@ -30,6 +35,16 @@ mongoose.connection
   .on('close', () => console.log('You are disconnected from Mongo'))
   .on('error', error => console.log(error))
 
+  /////////////////////////////////
+//Middleware
+//////////////////////////////////
+app.use(cors()) //Preventing cors errors, opening up access for frontend
+app.use(morgan('dev')) //Logging
+app.use(express.json()) //Parsing json bodies
+app.use(require('./controllers/user'))
+app.use(require('./controllers/post'))
+
+
 //////////////////////////////
 // Models
 //////////////////////////////
@@ -40,9 +55,9 @@ mongoose.connection
 // Routes
 ////////////////////////////////
 //Setting up a test route
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
 
 /////////////////////////////////
