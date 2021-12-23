@@ -13,6 +13,7 @@ Creepee is one of the projects I've been working on at General Assembly. This pr
 4- Cors 
 5- Morgan
 6- React
+7-MongoDb
 
 ### List of dependencies
 ```js
@@ -59,15 +60,15 @@ ess.json())
 ```
 
 ### Project Backend Overview
-This bookmark project is a three-person group project and each person gets assigned a specific piece of it to work on. This is an app that lets the user add a title and a link to helpful websites. When a title is clicked, it should take the user to the linked website.
+This Creepee project is a one person project . This is an app that lets the user add a title and images, etc... as posts. It features a navbar with  signup, login, profile and post routes.
 
 ### Backend Route Table
 | url             | method | action                       |
 | --------------- | ------ | ---------------------------- |
-| /bookmark/      | get    | get all bookmarks (index)    |
-| /bookmark       | post  | create a new bookmark         |
-| /bookmark/:id   | put    | update a bookmark            |
-| /bookmark/:id   | delete | delete a bookmark            |
+| /posts/      | get    | get all posts (index)    |
+| /posts      | post  | create a new post         |
+| /post/:id   | put    | update a post             |
+| /post/:id   | delete | delete a post          |
 
 ### Roadblocks
-One of the major roadblock we encountered was deciding how to divide the project for a three person group, and also handling merge conflicts. I personally cloned a repo inside of another repo and had trouble switching to the dev branch. I took me a while to get it all fixed.
+One of the major roadblock I encountered was deployment issues. It was really hard  to figure out the issue. I consumed about three hours trying to troubleshoot the deployment. Finally, I had to start from scratch again as it is best practice to perform the deployment when the roject is at its early stages.
